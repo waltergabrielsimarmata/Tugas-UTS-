@@ -1,9 +1,8 @@
 <?php
-require 'LuasLingkaran.php';
 
-echo Lingkaran::info() . "<br><br>";
+require_once('./LuasLingkaran.php');
 
-$ling = new Lingkaran(7);
+$obj = new LuasLingkaran();
 
-echo "Luas lingkaran = " . $ling->hitungLuas();
-?>
+echo "Nilai PHI: " . LuasLingkaran::PHI . "<br>";
+echo "Jari-jari: " . $obj->jari;
