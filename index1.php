@@ -1,9 +1,9 @@
 <?php
-require 'LuasLingkaran.php';
 
-echo Lingkaran::info() . "<br><br>";
+require_once('./LuasLingkaran.php');
 
-$ling = new Lingkaran(7);
+use App\Math\LuasLingkaran;
 
-echo "Luas lingkaran = " . $ling->hitungLuas();
-?>
+$ling = new LuasLingkaran(10);
+
+echo "Luas lingkaran: " . $ling->getLuas();
