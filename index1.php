@@ -1,9 +1,7 @@
 <?php
-require 'LuasLingkaran.php';
 
-echo Lingkaran::info() . "<br><br>";
+require_once('./LuasLingkaran.php');
 
-$ling = new Lingkaran(7);
-
-echo "Luas lingkaran = " . $ling->hitungLuas();
-?>
+$obj = new LuasLingkaran();
+$obj->tampil();
+LuasLingkaran::sapa();
