@@ -1,9 +1,21 @@
 <?php
-require 'LuasLingkaran.php';
 
-echo Lingkaran::info() . "<br><br>";
+class LuasLingkaran {
 
-$ling = new Lingkaran(7);
+    public const PHI = 3.14;
+    public int $jari;
 
-echo "Luas lingkaran = " . $ling->hitungLuas();
-?>
+    public function __construct($j = 10) {
+        $this->jari = $j;
+        echo "Constructor dijalankan<br>";
+    }
+
+    public function hitung() {
+        $hasil = self::PHI * ($this->jari * $this->jari);
+        echo "Luas lingkaran: {$hasil}";
+    }
+
+    public function __destruct() {
+        echo "<br>Destructor dijalankan...";
+    }
+}
